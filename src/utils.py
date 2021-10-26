@@ -1,7 +1,7 @@
 from pandas import read_csv
 import numpy as np
 from matplotlib import pyplot as plt
-from sklearn.metrics.pairwise import euclidean_distances
+from sklearn.metrics.pairwise import pairwise_distances
 
 
 def fit(Xtr, ytr):
@@ -43,8 +43,8 @@ def predict(Xts, centroids, classes=None):
     Predicts the label of each sample in Xts based on the closest centroid.
     Computationally efficient version that avoids for loops.
     """
-    dist_euclidean = euclidean_distances(Xts, centroids)
-    ypred = np.argmin(dist_euclidean, axis=1)
+    dist = pairwise_distances(Xts, centroids)
+    ypred = np.argmin(dist, axis=1)
     if classes is not None:
         ypred = classes[ypred]
     return ypred
