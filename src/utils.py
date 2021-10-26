@@ -85,7 +85,7 @@ def plot_image(x, title, h=28, w=28):
     -------
     None.
     """
-    plt.imshow(x.reshape((h, w)), cmap=plt.cm.gray)
+    plt.imshow(x.reshape((h, w)), cmap="gray")
     # cmap = plt.cm.gray -> sets the colormap to grayscale values
 
     plt.title(str(title))
