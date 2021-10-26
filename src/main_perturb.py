@@ -3,7 +3,7 @@ import matplotlib
 matplotlib.rcParams['text.usetex'] = True  # enable latex syntax in plots
 import matplotlib.pyplot as plt
 from utils import split_data, plot_ten_images, compute_ts_error
-from NMC import NearestMeanCentroid
+from nmc import NearestMeanCentroid
 from data_loaders import DataLoaderMNIST, DataLoaderLFW
 from data_perturb import DataPerturbUniform, DataPerturbNormal
 
